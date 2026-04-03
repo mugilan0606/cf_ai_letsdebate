@@ -3,6 +3,10 @@
 Multi-agent company debate app on Cloudflare Workers.  
 Add multiple company agents, let each build a profile from web sources, run 3 rebuttal cycles, and get a final judged verdict.
 
+
+
+Live Link: [https://cf-ai-competitor-research.mugilan0606.workers.dev/](https://cf-ai-competitor-research.mugilan0606.workers.dev/)
+
 ---
 
 This project uses a debate-first workflow instead of single-company summary scraping.
