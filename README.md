@@ -73,6 +73,36 @@ ResearchAgentSQLite Durable Object (src/debateAgent.ts)
 
 ---
 
+## Running Locally
+
+### 1) Install dependencies
+
+```bash
+npm install
+cd client && npm install
+```
+
+### 2) Start dev
+
+```bash
+npm run dev
+```
+
+Optional frontend-only dev server:
+
+```bash
+npm run client:dev
+```
+
+### 3) Build
+
+```bash
+npm run client:build
+npx wrangler deploy --dry-run
+```
+
+---
+
 ## Environment and Bindings
 
 Configured in `wrangler.jsonc`:
