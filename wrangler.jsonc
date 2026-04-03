@@ -1,0 +1,57 @@
+{
+	"name": "cf-ai-competitor-research",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-01",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"ai": {
+		"binding": "AI"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "competitor-research-db",
+			"database_id": "1646e105-2a7c-44f2-9647-8b9c4d38d846"
+		}
+	],
+	"vectorize": [
+		// {
+		// 	"binding": "VECTORIZE",
+		// 	"index_name": "competitor-research-index"
+		// },
+		{
+			"binding": "VECTORIZE",
+			"index_name": "competitor-research-index"
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "RESEARCH_AGENT",
+				"class_name": "ResearchAgentSQLite"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": [
+				"ResearchAgent"
+			]
+		},
+		{
+			"tag": "v2",
+			"new_sqlite_classes": [
+				"ResearchAgentSQLite"
+			]
+		}
+	],
+	"assets": {
+		"directory": "./client/dist",
+		"binding": "ASSETS"
+	},
+	"build": {
+		"command": "npm run client:build"
+	}
+}

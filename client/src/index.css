@@ -1,0 +1,93 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0a0f;
+  --bg-2: #0f0f18;
+  --bg-3: #13131e;
+  --surface: #16161f;
+  --surface-2: #1c1c2a;
+  --border: #252535;
+  --border-bright: #363650;
+  --accent: #7c6af7;
+  --accent-2: #a78bfa;
+  --accent-glow: rgba(124, 106, 247, 0.15);
+  --green: #4ade80;
+  --green-dim: rgba(74, 222, 128, 0.12);
+  --amber: #fbbf24;
+  --red: #f87171;
+  --text: #e8e8f0;
+  --text-2: #a0a0c0;
+  --text-3: #606080;
+  --font-mono: "Space Mono", monospace;
+  --font-sans: "Syne", sans-serif;
+  --radius: 8px;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+/* Markdown inside messages */
+.msg-content h1, .msg-content h2, .msg-content h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  color: var(--accent-2);
+}
+.msg-content p { margin: 0.4rem 0; line-height: 1.65; }
+.msg-content ul, .msg-content ol { padding-left: 1.4rem; margin: 0.4rem 0; }
+.msg-content li { margin: 0.25rem 0; }
+.msg-content strong { color: var(--text); font-weight: 700; }
+.msg-content em { color: var(--text-2); }
+.msg-content code {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+  color: var(--green);
+}
+.msg-content pre {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 0.6rem 0;
+}
+.msg-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.msg-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0.8rem 0;
+}
+.msg-content a { color: var(--accent-2); text-decoration: underline; }
+.msg-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.8rem;
+  color: var(--text-2);
+  margin: 0.4rem 0;
+}

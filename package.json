@@ -1,0 +1,22 @@
+{
+  "name": "cf_ai_competitor_research",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build"
+  },
+  "dependencies": {
+    "agents": "^0.3.0",
+    "ai": "^6.0.0",
+    "workers-ai-provider": "^3.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240725.0",
+    "typescript": "^5.5.2",
+    "wrangler": "^4.79.0"
+  }
+}
